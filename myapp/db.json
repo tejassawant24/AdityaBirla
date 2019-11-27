@@ -1,0 +1,26 @@
+{
+  "users":[{
+  "id":1,
+  "name":"tejas",
+  "gender":"male",
+  "marital status":"unmarried",
+  "kids":"none",
+  "profession":"salaried"
+},
+{
+  "id":2,
+  "name":"mayank",
+  "gender":"male",
+  "marital status":"married",
+  "kids":"5",
+  "profession":"self-employed"
+},
+{
+  "id":3,
+  "name":"shivani",
+  "gender":"female",
+  "marital status":"married",
+  "kids":"5",
+  "profession":"salaried"
+}]
+}
