@@ -49,95 +49,119 @@
 			     </div>
 
 
-    		<!-------start form------------->
-    		<div class="form-details">
-    				<div class="row">
-    					<div class="col-md-6 text-right d-flex align-content-center flex-wrap">
-    						
-							<input type="text" id="ip2" placeholder="ENTER NAME"/>
-
-    					</div>
-
-    					<div class="col-md-6 users">
-    						<div class="form">
-    							<img src="../../assets/img/2nd page images/male single icon.png " class="img-fluid">
-    							<p><strong>SELECT GENDER</strong></p>
-    						<span class="switcher switcher-1">
-   								<input type="checkbox" id="switcher-1">
-   									<label for="switcher-1"></label>
-							</span>
+			<!-------start form------------->
+			<form [formGroup]="userForm" class="form-horizontal" role="form" (ngSubmit)="Save(userForm.value)">
+					
+				<div class="form-details">
+						<div class="row">
+								
+							<div class="col-md-6 text-right d-flex align-content-center flex-wrap form-group">
+						
+								<input type="text" id="ip2" placeholder="ENTER NAME" formControlName="name"/>
+								
+								<!--Validation for name-->
+								<div class="alert" *ngIf="userForm.get('name').hasError('required') &&  submitted">
+										*name is required*
+								</div> 
+							    <div class="alert" *ngIf="!userForm.get('name').valid && !userForm.get('name').hasError('required') && submitted">
+									*valid name is required*
+								</div> 
+								
 							</div>
-    					</div>
+                           
 
-    				</div>
-    			</div>
-
-
-    		<!--	<div class="age">
-    				<div class="row">
-    					<p>SELECT AGE</p>
-    				</div>
-    			</div>-->
-
-
-		    	<div class="marrial">
-    				<div class="row">
-    				  <div class="col-md-6 user d-flex">
-    						<div class="form1">
-    							<img src="../../assets/img/2nd page images/male single icon.png" class="img-fluid">
-    							<p><strong>MARITAL STATUS</strong></p>
-    						<span class="switcher switcher-2">
-   								<input type="checkbox" id="switcher-2">
-   									<label for="switcher-2"></label>
-							</span>
+							<div class="col-md-6 users">
+								<div class="form">
+									<img src="../../assets/img/2nd page images/male single icon.png " class="img-fluid">
+									<p><strong>SELECT GENDER</strong></p>
+								<span class="switcher switcher-1">
+									<input type="checkbox" formControlName="gender"  id="switcher-1" >
+										<label for="switcher-1"></label>
+								</span>
+								</div>
 							</div>
-    					</div>
 
-    					<div class="col-md-6 kids">
-    						<div class="form2">
-    							
-    							<p><strong>KIDS</strong></p>
-    						<span class="switcher switcher-3">
-   								<input type="checkbox" id="switcher-3">
-   									<label for="switcher-3"></label>
-							</span>
+						</div>
+					</div>
+
+
+				<!--	<div class="age">
+						<div class="row">
+							<p>SELECT AGE</p>
+						</div>
+					</div>-->
+
+
+					<div class="marrial">
+						<div class="row">
+						<div class="col-md-6 user d-flex">
+								<div class="form1">
+									<img src="../../assets/img/2nd page images/male single icon.png" class="img-fluid">
+									<p><strong>MARITAL STATUS</strong></p>
+								<span class="switcher switcher-2">
+									<input type="checkbox" name="maritalStatus" formControlName="maritalStatus" id="switcher-2">
+										<label for="switcher-2"></label>
+								</span>
+								</div>
+							</div>
+
+							<div *ngIf="userForm.value.maritalStatus==true" class="col-md-6 kids form-group">
+								<div class="form2 ">
+									
+									<p><strong>KIDS</strong></p>
+								<span class="switcher switcher-3">
+									<input type="checkbox" formControlName="child" id="switcher-3" >
+										<label for="switcher-3"></label>
+								</span>
+								
+							   </div>
+								
+							<div *ngIf="userForm.value.child==true" class="kidselect">
+								<ul class="baby-style">
+									<li><img src="../../assets/img/1 baby icon.png"></li>
+									<li><img src="../../assets/img/2 baby icon.png"></li>
+									<li><img src="../../assets/img/3 baby icon.png" style="width: 40px;"></li>
+									<li><img src="../../assets/img/4 baby.png" style="width: 50px;"></li>
+									<input class=form-control type="text" id="ip3" placeholder="2" formControlName="kids" />
+									<!--Validation for kids-->
+							<div class="alert" *ngIf="userForm.get('kids').hasError('required') && submitted ">
+									*Number of kids required*
+							</div> 
+							<div class="alert" *ngIf="!userForm.get('kids').valid && submitted && !userForm.get('kids').hasError('required') ">
+									*Please enter valid number of kids *
+							</div> 
+								</ul>
+							</div>
+
 							
-    					</div>
-    					<div class="kidselect">
-    						<ul class="baby-style">
-    							<li><img src="../../assets/img/1 baby icon.png"></li>
-    							<li><img src="../../assets/img/2 baby icon.png"></li>
-    							<li><img src="../../assets/img/3 baby icon.png" style="width: 40px;"></li>
-    							<li><img src="../../assets/img/4 baby.png" style="width: 50px;"></li>
-    							<input type="text" id="ip3" placeholder="2" />
+						</div>
+					</div>
+				</div>
 
-    						</ul>
-    													</div>
-    				</div>
-    			</div>
-    		</div>
-
-    		<div class="profession">
-    			<div class="row">
-    				<div class="col-md-12 text-right d-flex align-content-center flex-wrap">
-    						<div class="form3">
-    							<img src="../../assets/img/male salaried.png" class="img-fluid">
-    							<p><strong>PROFESSION</strong></p>
-    						<span class="switcher switcher-4">
-   								<input type="checkbox" id="switcher-4">
-   									<label for="switcher-4 "></label>
-							</span>
+				<div class="profession">
+					<div class="row">
+						<div class="col-md-12 text-right d-flex align-content-center flex-wrap">
+								<div class="form3">
+									<img src="../../assets/img/male salaried.png" class="img-fluid">
+									<p><strong>PROFESSION</strong></p>
+								<span class="switcher switcher-4">
+									<input type="checkbox" formControlName="profession" id="switcher-4">
+										<label for="switcher-4 "></label>
+								</span>
+								</div>
 							</div>
-    					</div>
 
-    			</div>
-    		</div>
-    	
-    		<div class="row">
-           <div class=" col-md-12 lastbtns">
-	          <a href="select_goals.html" routerLink="/selectgoals"><button type="button" class="btn nextbtn"><b>Next</b></button></a>
-		   </div>
-		   </div>	          		
+					</div>
+				</div>
+
+		
+
+			  <div class="row">
+				<div class=" col-md-12 lastbtns form-group">
+					<a   ><button  type="submit"  class="btn nextbtn"><b>Next</b></button></a>
+				</div>
+				</div>	     
+		    </form>        		
 
 </div>
 
@@ -171,9 +195,10 @@
 			 	</div>
 	</div>
 	</div>
-	
+
 	
 	</div>
 </section>
+
 
 </body>

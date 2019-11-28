@@ -10,6 +10,7 @@ import { CalculatorgoalComponent } from './calculatorgoal/calculatorgoal.compone
 import { SelectgoalsComponent } from './selectgoals/selectgoals.component';
 import { GoalsComponent } from './goals/goals.component';
 import { TermgoalsComponent } from './termgoals/termgoals.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TermgoalsComponent } from './termgoals/termgoals.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
      RouterModule.forRoot(routes),
   ],
   providers: [],

@@ -180,7 +180,7 @@ input{
     height: 20px;  
     box-shadow: 0 4px 5px 0 rgba(0,0,50,0.5);
     text-align: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .form img{
 	height: 80px;
