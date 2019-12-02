@@ -11,6 +11,7 @@ import { SelectgoalsComponent } from './selectgoals/selectgoals.component';
 import { GoalsComponent } from './goals/goals.component';
 import { TermgoalsComponent } from './termgoals/termgoals.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     ReactiveFormsModule,
      RouterModule.forRoot(routes),
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

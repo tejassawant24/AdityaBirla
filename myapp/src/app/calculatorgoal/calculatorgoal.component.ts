@@ -3,6 +3,8 @@ import {Validators, FormGroup, FormBuilder} from '@angular/forms';
 import {Icalculatorgoal} from "../../Shared/Interfaces(Structure)/calculatorgoal"
 import {Regx} from "../../Shared/Regular expression/regx"
 import {Router} from "@angular/router"
+import {AdityaBirlaServices} from "../../Shared/Services/calculatorgoal.services"
+
 
 @Component({
   selector: 'app-calculatorgoal',
@@ -14,7 +16,7 @@ export class CalculatorgoalComponent implements OnInit {
   public submitted=false;
   
 
-  constructor(private fb:FormBuilder, private router:Router) { }
+  constructor(private fb:FormBuilder, private router:Router, private abs:AdityaBirlaServices) { }
 
   ngOnInit() {
     this.userForm = this.fb.group({
@@ -22,23 +24,30 @@ export class CalculatorgoalComponent implements OnInit {
        'gender':[false],
        'maritalStatus':[true],
        'child' :[false],
-       'kids':['', [ Validators.required, Regx.kids]],
+       'kids':['0', [ Validators.required, Regx.kids]],
        'profession':[false]
     });
 
   }
     
   Save(data:Icalculatorgoal){
+    
+    
     this.submitted=true;
-    console.log(this.userForm.value)
-    if(!this.userForm.valid){
-     this.router.navigateByUrl("/calculatorgoal");
-      
+    if(this.userForm.valid ){
+     this.router.navigateByUrl("/selectgoals");
     }
     else{
-      this.router.navigateByUrl("/selectgoals")
+      this.router.navigateByUrl("/calculatorgoal")
     }
     console.log(data);
+    if(this.userForm.valid){
+      this.abs.postCalculatorgoal(data).subscribe(item =>{
+       console.log(item)
+      });
+    }
+    
+
   }
 
 

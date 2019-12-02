@@ -58,23 +58,23 @@
     					<p><b>SELECT GOALS</b></p>
     				</div>
     				<ul>
-    					<li><div class="img-div"> <img src="../../assets/img/retirement color icon.png"></div><p>Retirement </p></li>
-    					<li><div class="img-div"> <img src="../../assets/img/holiday icon.png"></div><p>Holiday </p></li>
-    					<li><div class="img-div"><img src="../../assets//img/honeymoon icon.png"></div><p>Honeymoon</p></li>
-    					<li><div class="img-div"><img src="../../assets/img/marriege icon.png"></div><p>Marriage</p></li>
-    					<li><div class="img-div"><img src="../../assets/img/luxury car icon.png"></div><p>Car</p></li>
-    					<li><div class="img-div"><img src="../../assets/img/bike color icon.png"></div><p>Bike</p></li>
-    					<li><div class="img-div"><img src="../../assets/img/luxury car icon.png"></div><p>Luxury<br>Car</p></li>
-						<li><div class="img-div"><img src="../../assets/img/starting business icon.png"></div><p>Starting<br>Business</p></li>
-       					<li><div class="img-div"> <img src="../../assets/img/self development icon.png"></div><p>Self<br>Development</p></li>
-    					<li> <div class="img-div"><img src="../../assets/img/child's education icon.png"></div><p>Child’s<br>Education</p></li>
-    					<li><div class="img-div"> <img src="../../assets/img/child's marriege color icon.png"></div><p>Child’s Marriage</p></li>
-    					<li> <div class="img-div"><img src="../../assets/img/world tour icon.png"></div><p>World Tour</p></li>
-    					<li> <div class="img-div"><img src="../../assets/img/wealth creation icon.png"></div><p>Wealth<br>Creation</p></li>
-    					<li> <div class="img-div"><img src="../../assets/img/follow passion icon.png"></div><p> Follow Passion</p></li>
-    					<li> <div class="img-div"><img src="../../assets/img/Philanthropy icon.png"></div><p>Philanthropy</p></li>
-    					<li><div class="img-div"> <img src="../../assets/img/add other goal color icon.png"></div><p>Add Other Goals</p></li>
-    					<li> <div class="img-div"><img src="../../assets/img/add other goal color icon.png"></div><p>Add Other Goals</p></li>
+    					<li><a (click)="addRetirement()"><div class="img-div"> <img src="../../assets/img/retirement color icon.png"></div></a><p>Retirement </p></li>
+    					<li><a [routerLink]="" (click)="addHoliday()" ><div class="img-div"> <img src="../../assets/img/holiday icon.png"></div></a><p>Holiday </p></li>
+    					<li><a [routerLink]="" (click)="addHoneymoon()"><div class="img-div"><img src="../../assets//img/honeymoon icon.png"></div></a><p>Honeymoon</p></li>
+    					<li><a [routerLink]="" (click)="addMarriage()"><div class="img-div"><img src="../../assets/img/marriege icon.png"></div></a><p>Marriage</p></li>
+    					<li><a [routerLink]="" (click)="addCar()"><div class="img-div"><img src="../../assets/img/luxury car icon.png"></div></a><p>Car</p></li>
+    					<li><a [routerLink]="" (click)="addBike()"><div class="img-div"><img src="../../assets/img/bike color icon.png"></div></a><p>Bike</p></li>
+    					<li><a [routerLink]="" (click)="addLuxuryCar()"><div class="img-div"><img src="../../assets/img/luxury car icon.png"></div></a><p>Luxury<br>Car</p></li>
+						<li><a [routerLink]="" (click)="addStartingBusiness()"><div class="img-div"><img src="../../assets/img/starting business icon.png"></div></a><p>Starting<br>Business</p></li>
+       					<li><a [routerLink]="" (click)="addSelfDevelopment()"><div class="img-div"> <img src="../../assets/img/self development icon.png"></div></a><p>Self<br>Development</p></li>
+    					<li><a [routerLink]="" (click)="addChildsEducation()"><div class="img-div"><img src="../../assets/img/child's education icon.png"></div></a><p>Child’s<br>Education</p></li>
+    					<li><a [routerLink]="" (click)="addChildsMarriage()"><div class="img-div"> <img src="../../assets/img/child's marriege color icon.png"></div></a><p>Child’s Marriage</p></li>
+    					<li><a [routerLink]="" (click)="addWorldTour()"><div class="img-div"><img src="../../assets/img/world tour icon.png"></div></a><p>World Tour</p></li>
+    					<li><a [routerLink]="" (click)="addWealthCreation()"><div class="img-div"><img src="../../assets/img/wealth creation icon.png"></div></a><p>Wealth<br>Creation</p></li>
+    					<li><a [routerLink]="" (click)="addFollowPassion()"><div class="img-div"><img src="../../assets/img/follow passion icon.png"></div></a><p> Follow Passion</p></li>
+    					<li><a [routerLink]="" (click)="addPhilanthropy()"><div class="img-div"><img src="../../assets/img/Philanthropy icon.png"></div></a><p>Philanthropy</p></li>
+    					<li><a [routerLink]="" ><div class="img-div"> <img src="../../assets/img/add other goal color icon.png"></div></a><p>Add Other Goals</p></li>
+    					<li><a [routerLink]="" ><div class="img-div"><img src="../../assets/img/add other goal color icon.png"></div></a><p>Add Other Goals</p></li>
     			   </ul>
     			</div>
     		</div>
@@ -82,7 +82,7 @@
     				<div class="lastbtns">
 			    	<div class=" row">
 							<div class="col-md-12">
-							    <a href="goals.html" routerLink="/goals"><button type="button" class="btn nextbtn"><b>Next</b></button></a>
+							    <a routerLink="/goals"><button type="button" class="btn nextbtn" (click)="passGoals()"><b>Next</b></button></a>
 						    </div>
 				   </div>
 				</div>

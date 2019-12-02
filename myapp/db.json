@@ -31,6 +31,114 @@
       "marital status": "married",
       "kids": "5",
       "profession": "salaried"
+    },
+    {
+      "name": "champa",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": "0",
+      "profession": false,
+      "id": 5
+    },
+    {
+      "name": "rohit sharma",
+      "gender": true,
+      "maritalStatus": true,
+      "child": true,
+      "kids": "10",
+      "profession": false,
+      "id": 6
+    },
+    {
+      "name": "4545efefefefefe",
+      "gender": false,
+      "maritalStatus": false,
+      "child": false,
+      "kids": "0",
+      "profession": false,
+      "id": 7
+    },
+    {
+      "name": "tejas",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": "0",
+      "profession": false,
+      "id": 8
+    },
+    {
+      "name": "tiger",
+      "gender": true,
+      "maritalStatus": true,
+      "child": true,
+      "kids": "10",
+      "profession": false,
+      "id": 9
+    },
+    {
+      "name": "tejas",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": "0",
+      "profession": false,
+      "id": 10
+    },
+    {
+      "name": "rtrt",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": "0",
+      "profession": false,
+      "id": 11
+    },
+    {
+      "name": "Virat Kohli",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": "0",
+      "profession": false,
+      "id": 12
+    },
+    {
+      "name": "tejas",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": "034343",
+      "profession": false,
+      "id": 13
+    },
+    {
+      "name": "dggdhsghdgshgd",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": "23232332",
+      "profession": false,
+      "id": 14
+    },
+    {
+      "name": "feefefefe",
+      "gender": false,
+      "maritalStatus": true,
+      "child": true,
+      "kids": "11221",
+      "profession": false,
+      "id": 15
+    },
+    {
+      "name": "Deepali",
+      "gender": false,
+      "maritalStatus": true,
+      "child": false,
+      "kids": 0,
+      "profession": false,
+      "id": 16
     }
   ]
 }
