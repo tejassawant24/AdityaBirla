@@ -1,4 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 
 
 
@@ -10,10 +13,20 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SelectgoalsComponent implements OnInit {
 public goals:[{}]=[{}]
 
-@Output() Eid = new EventEmitter();
-  constructor() { }
+
+  constructor(
+    private router : Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  test() {
+    console.log(this.router.config)
+    let route = this.router.config.find(r => r.path === 'goals');
+    console.log(route)
+    route.data = { entity: 'entity' };
+    this.router.navigateByUrl('/goals');
   }
 
   addRetirement(){
@@ -22,7 +35,10 @@ public goals:[{}]=[{}]
       goal:"Retiremnet",
       img:"../../assets/img/retirement color icon.png"
     }
-       this.Eid.emit(retirement);
+       
+         this.goals.push(retirement);
+         
+       
   }
 
   addHoliday(){
@@ -31,7 +47,7 @@ public goals:[{}]=[{}]
       goal:"Holiday",
       img:"../../assets/img/retirement color icon.png"
     }
-    this.Eid.emit(holiday);
+  
   }
   addHoneymoon(){
     let honey ={
@@ -42,8 +58,6 @@ public goals:[{}]=[{}]
     
     
 
-      this.Eid.emit(honey);
-    
   }
   addMarriage(){
     let marriage ={
@@ -52,9 +66,7 @@ public goals:[{}]=[{}]
       img:"../../assets/img/retirement color icon.png"
     }
    
-   
-     
-      this.Eid.emit(marriage);
+
     
   }
   addCar(){
@@ -64,7 +76,6 @@ public goals:[{}]=[{}]
       img:"../../assets/img/retirement color icon.png"
     }
   
-      this.Eid.emit(car);    
   }
   addBike(){
     let bike ={
@@ -73,7 +84,7 @@ public goals:[{}]=[{}]
       img:"../../assets/img/retirement color icon.png"
     }
     
-      this.Eid.emit(bike);
+      
     
   }
   addLuxuryCar(){
@@ -83,7 +94,6 @@ public goals:[{}]=[{}]
       img:"../../assets/img/retirement color icon.png"
     }
    
-      this.Eid.emit(luxuryCar);
     
   }
   addStartingBusiness(){
@@ -95,7 +105,7 @@ public goals:[{}]=[{}]
    
     
      
-      this.Eid.emit(startingBusiness);
+   
     
   }
   addSelfDevelopment(){
@@ -106,8 +116,7 @@ public goals:[{}]=[{}]
     }
     
     
-      
-      this.Eid.emit(selfDevelopment);
+ 
     
   }
   addChildsEducation(){
@@ -119,7 +128,7 @@ public goals:[{}]=[{}]
     
     
      
-      this.Eid.emit(childsEducation);
+      
     
   }
   addChildsMarriage(){
@@ -131,7 +140,6 @@ public goals:[{}]=[{}]
     
     
       
-        this.Eid.emit(childMarriage);
     
   }
   addWorldTour(){
@@ -143,7 +151,7 @@ public goals:[{}]=[{}]
     
     
   
-      this.Eid.emit(worldTour);
+     
     
   }
   addWealthCreation(){
@@ -155,7 +163,7 @@ public goals:[{}]=[{}]
     
     
       
-      this.Eid.emit(wealthCreation);
+      
     
   }
   addFollowPassion(){
@@ -167,7 +175,7 @@ public goals:[{}]=[{}]
    
     
       
-      this.Eid.emit(followPassion);
+  
     
   }
   addPhilanthropy(){
@@ -176,9 +184,13 @@ public goals:[{}]=[{}]
       goal:"Philanthropy",
       img:"../../assets/img/retirement color icon.png"
     }
-  
-      this.Eid.emit(philanthropy);
+
     
+  }
+
+  passData(){
+  
+   
   }
 
 

@@ -5,10 +5,12 @@ import { SelectgoalsComponent } from './selectgoals/selectgoals.component';
 import { GoalsComponent } from './goals/goals.component';
 import { TermgoalsComponent } from './termgoals/termgoals.component';
 
+
 export const routes : Route[] = [
 {
     path:"",
-    component:AdityabirlaComponent
+    component:AdityabirlaComponent,
+  
 },
 {
     path : 'calculatorgoal',
@@ -20,7 +22,9 @@ export const routes : Route[] = [
 },
 {
     path:'goals',
-    component: GoalsComponent
+    component: GoalsComponent,
+    data : {getData : 'goals'}
+   
 },
 {
     path: 'termgoals',
