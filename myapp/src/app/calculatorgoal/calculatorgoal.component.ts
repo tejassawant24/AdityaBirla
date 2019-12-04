@@ -21,19 +21,71 @@ export class CalculatorgoalComponent implements OnInit {
   ngOnInit() {
     this.userForm = this.fb.group({
       'name':['', [Validators.required, Regx.Name]],
-       'gender':[false],
+       'gender':[true],
        'maritalStatus':[true],
        'child' :[false],
        'kids':['0', [ Validators.required, Regx.kids]],
        'profession':[false]
     });
 
+    
+    //Dynamic changes in male image
+    if(this.userForm.value.gender == true){
+      let gender={
+        gender:"../../assets/img/2nd page images/male single icon.png"
+      }
+    }
+
+    if(this.userForm.value.gender == false){
+      let gender={
+        female:"../../assets/img/2nd page images/female single icon.png"
+      }
+    }
+
+
+
+  }
+  //Dynamic changes in male and female image
+  gender(){
+    if(this.userForm.value.gender == true){
+      let gender="../../assets/img/2nd page images/male single icon.png"
+    }
+    else{
+      let gender ="../../assets/img/2nd page images/female single icon.png"
+    }
   }
     
   Save(data:Icalculatorgoal){
-    
-    
     this.submitted=true;
+
+    if(this.userForm.value.gender == true){
+      data.gender="Male"
+    }
+    if(this.userForm.value.gender == false){
+      data.gender="Female"
+    }
+
+    if(this.userForm.value.maritalStatus == true){
+      data.maritalStatus="Married"
+    }
+    if(this.userForm.value.maritalStatus == false){
+      data.maritalStatus="Unmarried"
+    }
+
+    if(this.userForm.value.child == true){
+      data.child="Yes"
+    }
+    if(this.userForm.value.child == false){
+      data.child="None"
+    }
+
+    if(this.userForm.value.profession == true){
+      data.profession="Salaried"
+    }
+    if(this.userForm.value.profession == false){
+      data.profession="Self-Employed"
+    }
+
     if(this.userForm.valid ){
      this.router.navigateByUrl("/selectgoals");
     }

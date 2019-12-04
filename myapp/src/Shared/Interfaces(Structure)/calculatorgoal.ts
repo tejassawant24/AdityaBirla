@@ -1,8 +1,8 @@
 export interface Icalculatorgoal{
     name:string,
-    gender:boolean,
-    maritalStatus:boolean,
-    child:boolean,
+    gender:any,
+    maritalStatus:any,
+    child:any,
     kids:number,
-    profession:boolean
+    profession:any
 }

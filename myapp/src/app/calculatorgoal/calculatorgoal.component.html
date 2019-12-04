@@ -26,9 +26,21 @@
 					    <div class="col-md-12 head mt-15">
 						 <h3><strong>Life Goal Calculator</strong></h3>
 			           </div>
-			        </div>
+					</div>
+					
+					<div class="container progressbars">
+						<div class="row">
+					<div class="col-md-12 text-center">
+				<ul class="progressbar">
+					<li class="active"><strong>Enter <br>Details</strong></li>
+					<li><strong>Select & <br>Prioritize Goals</strong></li>
+					<li><strong>Calculate Goal <br>Values</strong></li>
+				</ul>
+			</div>
+			</div>
+			</div>
 
-			        <div class="selectmenu mt-15">
+			        <!-- <div class="selectmenu mt-15">
 			         <div class="row">
 			        <div class="col-md-4 col-sm-4 col-4 col-4-css">
 			          		<button type="button" class="btn selectbtn"><b>Step 1</b></button>
@@ -46,7 +58,7 @@
                         <div class="line"></div>
                      </div>
 			         </div>
-			     </div>
+			     </div> -->
 
 
 			<!-------start form------------->
@@ -72,7 +84,7 @@
 
 							<div class="col-md-6 users">
 								<div class="form">
-									<img src="../../assets/img/2nd page images/male single icon.png " class="img-fluid">
+									<img src="../../assets/img/2nd page images/male single icon.png" (click)="gender()" class="img-fluid">
 									<p><strong>SELECT GENDER</strong></p>
 								<span class="switcher switcher-1">
 									<input type="checkbox" formControlName="gender"  id="switcher-1" >

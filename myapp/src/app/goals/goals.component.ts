@@ -6,7 +6,7 @@ import { Icalculatorgoal } from 'src/Shared/Interfaces(Structure)/calculatorgoal
 @Component({
   selector: 'app-goals',
   templateUrl: './goals.component.html',
-  styleUrls: ['./goals.component.css'],
+  styleUrls: [/*'./goals.component.css'*/],
 })
 export class GoalsComponent implements OnInit {
 public arr:Icalculatorgoal[]=[];

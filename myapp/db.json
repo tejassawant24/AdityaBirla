@@ -1,144 +1,103 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "tejas",
-      "gender": "male",
-      "marital status": "unmarried",
-      "kids": "none",
-      "profession": "salaried"
-    },
-    {
-      "id": 2,
-      "name": "mayank",
-      "gender": "male",
-      "marital status": "married",
-      "kids": "5",
-      "profession": "self-employed"
-    },
-    {
-      "id": 3,
-      "name": "shivani",
-      "gender": "female",
-      "marital status": "married",
-      "kids": "5",
-      "profession": "salaried"
-    },
-    {
-      "id": 4,
-      "name": "rani",
-      "gender": "female",
-      "marital status": "married",
-      "kids": "5",
-      "profession": "salaried"
-    },
-    {
-      "name": "champa",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
+      "name": "Deepali",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
       "kids": "0",
-      "profession": false,
+      "profession": "Self-Employed",
+      "id": 2
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "Yes",
+      "kids": "5",
+      "profession": "Salaried",
+      "id": 3
+    },
+    {
+      "name": "rr",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
+      "kids": "0",
+      "profession": "Self-Employed",
+      "id": 4
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
+      "kids": "0",
+      "profession": "Self-Employed",
       "id": 5
     },
     {
-      "name": "rohit sharma",
-      "gender": true,
-      "maritalStatus": true,
-      "child": true,
-      "kids": "10",
-      "profession": false,
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
+      "kids": "0",
+      "profession": "Self-Employed",
       "id": 6
     },
     {
-      "name": "4545efefefefefe",
-      "gender": false,
-      "maritalStatus": false,
-      "child": false,
+      "name": "ertge",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
       "kids": "0",
-      "profession": false,
+      "profession": "Self-Employed",
       "id": 7
     },
     {
-      "name": "tejas",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
+      "name": "tej",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
       "kids": "0",
-      "profession": false,
+      "profession": "Self-Employed",
       "id": 8
     },
     {
-      "name": "tiger",
-      "gender": true,
-      "maritalStatus": true,
-      "child": true,
-      "kids": "10",
-      "profession": false,
+      "name": "rert",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
+      "kids": "0",
+      "profession": "Self-Employed",
       "id": 9
     },
     {
-      "name": "tejas",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
+      "name": "fe",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
       "kids": "0",
-      "profession": false,
+      "profession": "Self-Employed",
       "id": 10
     },
     {
-      "name": "rtrt",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
       "kids": "0",
-      "profession": false,
+      "profession": "Self-Employed",
       "id": 11
     },
     {
-      "name": "Virat Kohli",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
-      "kids": "0",
-      "profession": false,
-      "id": 12
-    },
-    {
       "name": "tejas",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
-      "kids": "034343",
-      "profession": false,
-      "id": 13
-    },
-    {
-      "name": "dggdhsghdgshgd",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
-      "kids": "23232332",
-      "profession": false,
-      "id": 14
-    },
-    {
-      "name": "feefefefe",
-      "gender": false,
-      "maritalStatus": true,
-      "child": true,
-      "kids": "11221",
-      "profession": false,
-      "id": 15
-    },
-    {
-      "name": "Deepali",
-      "gender": false,
-      "maritalStatus": true,
-      "child": false,
-      "kids": 0,
-      "profession": false,
-      "id": 16
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": "None",
+      "kids": "0",
+      "profession": "Self-Employed",
+      "id": 12
     }
   ]
 }
