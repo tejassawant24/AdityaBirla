@@ -18,6 +18,10 @@
 body{
 	font-family: handbookPro !important;
 }
+.container-fluid{
+  padding-left:0px;
+  padding-right:0px;
+}
 input:hover, input:focus {
   outline: none !important;
 }
@@ -268,7 +272,7 @@ margin-bottom: 5px;
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
  }
 .form span.switcher input{
   -webkit-appearance: none;
@@ -485,7 +489,7 @@ margin-right: 40px;
 
 .kids{
 	margin-bottom: 24px;
-      margin-right: 0px;
+     margin-left: 30px;
 }
 #ip3 {
     border-radius: 45px;
@@ -504,9 +508,9 @@ margin-right: 40px;
   height: 25px;
   margin: 10px;}
 
-.baby-style img:hover{
+.baby-style li:hover{
   
-  
+  border-right:none;
     background-color: #FF8C00;
     border-radius: 10px;}
 
@@ -537,13 +541,15 @@ display: inline-block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 18px;
+  margin-right:82px;
   }
 .form2 span.switcher {
   position: relative;
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 7px;
   }
 .form2 span.switcher input {
   -webkit-appearance: none;
@@ -569,11 +575,13 @@ display: inline-block;
   content: 'YES';
   left: 27PX;
   font-size: 14px;
+  cursor: pointer;
 }
 .form2 span.switcher input:after {
   content: 'NONE';
   font-size: 14px;
   right: 27PX;
+  cursor: pointer;
 }
 .form2 span.switcher label {
   z-index: 1;

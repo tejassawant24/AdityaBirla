@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Validators, FormGroup, FormBuilder } from "@angular/forms";
+import { Validators, FormGroup, FormBuilder, AbstractControl, ValidationErrors } from "@angular/forms";
 import { Icalculatorgoal } from "../../Shared/Interfaces(Structure)/calculatorgoal";
 import { Regx } from "../../Shared/Regular expression/regx";
 import { Router } from "@angular/router";
@@ -17,6 +17,8 @@ export class CalculatorgoalComponent implements OnInit {
     "../../assets/img/2nd page images/male single icon.png";
   public marriedImg: string =
     "../../assets/img/2nd page images/married male icon.png";
+  public numberOfKids:any;  
+  public validator:string;
 
   constructor(
     private fb: FormBuilder,
@@ -30,23 +32,27 @@ export class CalculatorgoalComponent implements OnInit {
       gender: [true],
       maritalStatus: [true],
       child: [false],
-      kids: ["0", [Validators.required, Regx.kids]],
+      kids: [0, [ Regx.kids]],
       profession: [false]
     });
 
-    //Dynamic changes in male image
-    // if(this.userForm.value.gender == true){
-    //   let gender={
-    //     gender:"../../assets/img/2nd page images/male single icon.png"
-    //   }
-    // }
+    
 
-    // if(this.userForm.value.gender == false){
-    //   let gender={
-    //     female:"../../assets/img/2nd page images/female single icon.png"
-    //   }
-    // }
+    // Dynamic changes in male image
+    if(this.userForm.value.gender == true){
+      let gender={
+        gender:"../../assets/img/2nd page images/male single icon.png"
+      }
+    }
+
+    if(this.userForm.value.gender == false){
+      let gender={
+        female:"../../assets/img/2nd page images/female single icon.png"
+      }
+    }
   }
+
+  
   //Dynamic changes in male and female image
   genderImg() {
     if (this.userForm.value.gender == true) {
@@ -77,9 +83,35 @@ export class CalculatorgoalComponent implements OnInit {
       : (this.marriedImg = "../../assets/img/2nd page images/female icon.png");
   }
 
+  //Methods to store and show no. of kids on click event on 4 kids images
+  kid1(){
+   this.userForm.value.kids = 1;
+   this.numberOfKids=this.userForm.value.kids;
+   console.log(this.numberOfKids);
+   
+  }
+  kid2(){
+    this.userForm.value.kids = 2;
+    this.numberOfKids=this.userForm.value.kids;
+    console.log(this.numberOfKids);
+  }
+  kid3(){
+    this.userForm.value.kids = 3;
+    this.numberOfKids=this.userForm.value.kids;
+    console.log(this.numberOfKids);
+  }
+  kid4(){
+    this.userForm.value.kids = 4;
+    this.numberOfKids=this.userForm.value.kids;
+    console.log(this.numberOfKids);
+    console.log(this.userForm.value.kids)
+  }
+
   //Data coming from Reactive form on click event
   Save(data: Icalculatorgoal) {
     this.submitted = true;
+    console.log(this.userForm.valid);
+    
 
     if (this.userForm.value.gender == true) {
       data.gender = "Male";
@@ -88,16 +120,33 @@ export class CalculatorgoalComponent implements OnInit {
       data.gender = "Female";
     }
 
-    if (this.userForm.value.maritalStatus == true) {
-      data.maritalStatus = "Married";
+    //Validation for no. of kids
+    if(this.userForm.value.child == false){
+      data.kids=0;
+    }
+    else{
+      if(this.userForm.value.kids === 0){
+        this.validator="*Please enter number of Kids*"
+        return null
+      }
+    }
+
+    
+
+    // if (this.userForm.value.maritalStatus == true) {       //no. of kids error
+    //   data.maritalStatus = "Married";
+    // }
+
+    if(this.userForm.value.maritalStatus ===true){
+        data.maritalStatus="Married"
     }
     if (this.userForm.value.maritalStatus == false) {
       data.maritalStatus = "Unmarried";
     }
 
-    if (this.userForm.value.child == true) {
-      data.child = "Yes";
-    }
+    // if (this.userForm.value.child == true) {               //no. of kids error
+    //   data.child = "Yes";
+    // }
     if (this.userForm.value.child == false) {
       data.child = "None";
     }

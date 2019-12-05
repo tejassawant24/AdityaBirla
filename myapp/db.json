@@ -98,6 +98,123 @@
       "kids": "0",
       "profession": "Self-Employed",
       "id": 12
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": "None",
+      "kids": 0,
+      "profession": "Self-Employed",
+      "id": 13
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 4,
+      "profession": "Self-Employed",
+      "id": 14
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": "None",
+      "kids": 0,
+      "profession": "Self-Employed",
+      "id": 15
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 4,
+      "profession": "Self-Employed",
+      "id": 16
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 4,
+      "profession": "Self-Employed",
+      "id": 17
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 4,
+      "profession": "Self-Employed",
+      "id": 18
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 2,
+      "profession": "Self-Employed",
+      "id": 19
+    },
+    {
+      "name": "deepali",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 2,
+      "profession": "Self-Employed",
+      "id": 20
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 3,
+      "profession": "Self-Employed",
+      "id": 21
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 4,
+      "profession": "Self-Employed",
+      "id": 22
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": 4,
+      "profession": "Self-Employed",
+      "id": 23
+    },
+    {
+      "name": "tejs",
+      "gender": "Male",
+      "maritalStatus": true,
+      "child": true,
+      "kids": "64",
+      "profession": "Self-Employed",
+      "id": 24
+    },
+    {
+      "name": "tejas",
+      "gender": "Male",
+      "maritalStatus": "Married",
+      "child": true,
+      "kids": 4,
+      "profession": "Salaried",
+      "id": 25
     }
   ]
 }

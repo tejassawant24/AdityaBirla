@@ -3,6 +3,6 @@ export interface Icalculatorgoal{
     gender:any,
     maritalStatus:any,
     child:any,
-    kids:number,
+    kids:any,
     profession:any
 }

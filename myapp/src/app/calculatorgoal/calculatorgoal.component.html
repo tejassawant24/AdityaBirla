@@ -141,18 +141,18 @@
 
               <div *ngIf="userForm.value.child==true" class="kidselect">
                 <ul class="baby-style">
-                  <li><img src="../../assets/img/1 baby icon.png"></li>
-                  <li><img src="../../assets/img/2 baby icon.png"></li>
-                  <li><img src="../../assets/img/3 baby icon.png" style="width: 40px;"></li>
-                  <li><img src="../../assets/img/4 baby.png" style="width: 50px;"></li>
-                  <input *ngIf="userForm.value.child == true" class=form-control type="text" id="ip3" placeholder="2"
+                  <li><img src="../../assets/img/1 baby icon.png" (click)="kid1()"></li>
+                  <li><img src="../../assets/img/2 baby icon.png" (click)="kid2()"></li>
+                  <li><img src="../../assets/img/3 baby icon.png" (click)="kid3()"style="width: 40px;"></li>
+                  <li><img src="../../assets/img/4 baby.png" style="width: 50px;"  (click)="kid4()"></li>
+                  <input *ngIf="userForm.value.child == true" value="{{numberOfKids}}" class=form-control type="text" id="ip3" placeholder="2"
                     formControlName="kids" />
                   <!--Validation for kids-->
-                  <div class="alert" *ngIf="userForm.get('kids').hasError('required') && submitted ">
-                    *Number of kids required*
+                  <!-- <div class="alert" *ngIf="userForm.get('kids').hasError('required') && submitted "> -->
+                  <div class="alert"  >
+                   {{validator}}
                   </div>
-                  <div class="alert"
-                    *ngIf="!userForm.get('kids').valid && submitted && !userForm.get('kids').hasError('required') ">
+                  <div class="alert" *ngIf="!userForm.get('kids').valid && submitted  ">
                     *Please enter valid number of kids *
                   </div>
                 </ul>
