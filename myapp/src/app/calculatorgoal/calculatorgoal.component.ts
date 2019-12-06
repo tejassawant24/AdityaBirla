@@ -161,6 +161,7 @@ export class CalculatorgoalComponent implements OnInit {
   Save(data: Icalculatorgoal) {
     this.submitted = true;
     console.log(this.userForm.valid);
+   
 
     if (this.userForm.value.gender == true) {
       data.gender = "Male";
@@ -169,31 +170,20 @@ export class CalculatorgoalComponent implements OnInit {
       data.gender = "Female";
     }
 
-    //Validation for no. of kids
-    if (this.userForm.value.child == false) {
-      data.kids = 0;
-    } 
-     if (this.userForm.value.kids === 0) {
-       console.log(this.userForm.value.kids)
-        return this.validator = "*Please enter number of Kids*";
-        
-      }
-    
+    if (this.userForm.value.maritalStatus == true) {       //no. of kids error
+      data.maritalStatus = "Married";
+    }
 
-    // if (this.userForm.value.maritalStatus == true) {       //no. of kids error
-    //   data.maritalStatus = "Married";
-    // }
-
-    // if (this.userForm.value.maritalStatus === true) {      //kids
-    //   data.maritalStatus = "Married";
-    // }
+    if (this.userForm.value.maritalStatus == true) {      //kids error
+      data.maritalStatus = "Married";
+    }
     if (this.userForm.value.maritalStatus == false) {
       data.maritalStatus = "Unmarried";
     }
 
-    // if (this.userForm.value.child == true) {               //no. of kids error
-    //   data.child = "Yes";
-    // }
+    if (this.userForm.value.child == true) {               //no. of kids error
+      data.child = "Yes";
+    }
     if (this.userForm.value.child == false) {
       data.child = "None";
     }
@@ -204,6 +194,16 @@ export class CalculatorgoalComponent implements OnInit {
     if (this.userForm.value.profession == false) {
       data.profession = "Self-Employed";
     }
+
+    //Validation for no. of kids
+    if (this.userForm.value.child == false) {
+      data.kids = 0;
+    } 
+    else if (this.userForm.value.kids === 0) {
+       console.log(this.userForm.value.kids)
+        return this.validator = "*Please enter number of Kids*";
+        
+      }
 
     if (this.userForm.valid) {
       this.router.navigateByUrl("/selectgoals");
