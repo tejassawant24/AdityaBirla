@@ -19,11 +19,12 @@ import { AdityaBirlaServices } from "../../Shared/Services/calculatorgoal.servic
 export class CalculatorgoalComponent implements OnInit {
   public userForm: FormGroup;
   public submitted = false;
-  public gender: string =
-    "../../assets/img/2nd page images/male single icon.png";
+  public gender: string;
+  //   "../../assets/img/2nd page images/male single icon.png";
   public marriedImg: string =
     "../../assets/img/2nd page images/married male icon.png";
-  public profImg: string = "../../assets/img/2nd page images/male salaried.png";
+  public profImg: string =
+    "../../assets/img/2nd page images/male self employeed.png";
   public numberOfKids: any;
   public validator: string;
 
@@ -60,13 +61,14 @@ export class CalculatorgoalComponent implements OnInit {
   //Dynamic changes in male and female image
   genderImg() {
     if (this.userForm.value.gender == true) {
-      this.gender = "../../assets/img/2nd page images/female single icon.png";
+      this.gender = "../../assets/img/2nd page images/male single icon.png";
       this.marriedImg =
         "../../assets/img/2nd page images/married female icon.png";
+
       console.log(this.gender);
       console.log(this.userForm.value.gender);
     } else {
-      this.gender = "../../assets/img/2nd page images/male single icon.png";
+      this.gender = "../../assets/img/2nd page images/female single icon.png";
       this.marriedImg =
         "../../assets/img/2nd page images/married male icon.png";
       console.log(this.gender);
@@ -75,16 +77,20 @@ export class CalculatorgoalComponent implements OnInit {
   }
   //Toggling of married male and married female images wrt gender value
   maritalStatusImg() {
-    this.userForm.value.gender == true
-      ? (this.marriedImg =
-          "../../assets/img/2nd page images/married male icon.png")
-      : (this.marriedImg =
-          "../../assets/img/2nd page images/married female icon.png");
+    if (
+      this.userForm.value.gender == false &&
+      this.userForm.value.maritalStatus == true
+    ) {
+      this.marriedImg =
+        "../../assets/img/2nd page images/female single icon.png";
+      console.log(this.userForm.value.gender);
+      console.log(this.userForm.value.maritalStatus);
+    }
 
     //Toggling between married and single images wrt marital status value
-    this.userForm.value.maritalStatus
-      ? (this.marriedImg = "../../assets/img/2nd page images/male icon.png")
-      : (this.marriedImg = "../../assets/img/2nd page images/female icon.png");
+    // this.userForm.value.maritalStatus
+    //   ? (this.marriedImg = "../../assets/img/2nd page images/male icon.png")
+    //   : (this.marriedImg = "../../assets/img/2nd page images/female icon.png");
   }
 
   professionImg() {
