@@ -135,22 +135,26 @@ export class CalculatorgoalComponent implements OnInit {
     this.userForm.value.kids = 1;
     this.numberOfKids = this.userForm.value.kids;
     console.log(this.numberOfKids);
+    this.validator="";
   }
   kid2() {
     this.userForm.value.kids = 2;
     this.numberOfKids = this.userForm.value.kids;
     console.log(this.numberOfKids);
+    this.validator="";
   }
   kid3() {
     this.userForm.value.kids = 3;
     this.numberOfKids = this.userForm.value.kids;
     console.log(this.numberOfKids);
+    this.validator="";
   }
   kid4() {
     this.userForm.value.kids = 4;
     this.numberOfKids = this.userForm.value.kids;
     console.log(this.numberOfKids);
     console.log(this.userForm.value.kids);
+    this.validator="";
   }
 
   //Data coming from Reactive form on click event
@@ -168,12 +172,13 @@ export class CalculatorgoalComponent implements OnInit {
     //Validation for no. of kids
     if (this.userForm.value.child == false) {
       data.kids = 0;
-    } else {
-      if (this.userForm.value.kids === 0) {
-        this.validator = "*Please enter number of Kids*";
-        return null;
+    } 
+     if (this.userForm.value.kids === 0) {
+       console.log(this.userForm.value.kids)
+        return this.validator = "*Please enter number of Kids*";
+        
       }
-    }
+    
 
     // if (this.userForm.value.maritalStatus == true) {       //no. of kids error
     //   data.maritalStatus = "Married";

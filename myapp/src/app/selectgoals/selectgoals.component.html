@@ -70,7 +70,7 @@
     					<p><b>SELECT GOALS</b></p>
     				</div>
     				<ul>
-    					<li><a (click)="addRetirement()"><div class="img-div"> <img src="../../assets/img/retirement color icon.png"></div></a><p>Retirement </p></li>
+    					<li value={{abc}}><a (click)="addRetirement()"><div class="img-div"> <img src="../../assets/img/retirement color icon.png"></div></a><p>Retirement </p></li>
     					<li><a [routerLink]="" (click)="addHoliday()" ><div class="img-div"> <img src="../../assets/img/holiday icon.png"></div></a><p>Holiday </p></li>
     					<li><a [routerLink]="" (click)="addHoneymoon()"><div class="img-div"><img src="../../assets//img/honeymoon icon.png"></div></a><p>Honeymoon</p></li>
     					<li><a [routerLink]="" (click)="addMarriage()"><div class="img-div"><img src="../../assets/img/marriege icon.png"></div></a><p>Marriage</p></li>
@@ -94,7 +94,7 @@
     				<div class="lastbtns">
 			    	<div class=" row">
 							<div class="col-md-12">
-							    <a (click)="test()"><button type="button" class="btn nextbtn"  ><b>Next</b></button></a>
+							    <a routerLink="/goals"><button type="button" class="btn nextbtn"  ><b>Next</b></button></a>
 						    </div>
 				   </div>
 				</div>
