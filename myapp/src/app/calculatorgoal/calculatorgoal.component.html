@@ -96,7 +96,7 @@
                 <img src="{{gender}}" class="img-fluid">
                 <p><strong>SELECT GENDER</strong></p>
                 <span class="switcher switcher-1">
-                  <input type="checkbox" formControlName="gender" (click)="genderImg()" id="switcher-1">
+                  <input type="checkbox" formControlName="gender" (change)="genderImg()" id="switcher-1">
                   <label for="switcher-1"></label>
                 </span>
               </div>
@@ -122,7 +122,7 @@
                 <p><strong>MARITAL STATUS</strong></p>
                 <span class="switcher switcher-2">
                   <input type="checkbox" name="maritalStatus" formControlName="maritalStatus"
-                    (click)="maritalStatusImg()" id="switcher-2">
+                    (change)="maritalStatusImg()" id="switcher-2">
                   <label for="switcher-2"></label>
                 </span>
               </div>
@@ -171,7 +171,7 @@
                 <img src="{{profImg}}" class="img-fluid">
                 <p><strong>PROFESSION</strong></p>
                 <span class="switcher switcher-4">
-                  <input type="checkbox" formControlName="profession" id="switcher-4" (click)="professionImg()">
+                  <input type="checkbox" formControlName="profession" id="switcher-4" (change)="professionImg()">
                   <label for="switcher-4 "></label>
                 </span>
               </div>
