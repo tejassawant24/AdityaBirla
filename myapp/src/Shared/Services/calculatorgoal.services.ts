@@ -8,12 +8,12 @@ import { Igoal } from '../Interfaces(Structure)/goal';
 
 export class AdityaBirlaServices{
     private calculatorgoal_post_url : string = 'http://localhost:3000/users';
-    private goal_get_url :string ="http://localhost:3000/goals";
+    private goal_get_url :string ="../../assets/API/goals.json";
    
    
    
     public headers:HttpHeaders;
-    constructor( private http:HttpClient, ){
+    constructor( private http:HttpClient ){
         this.headers = new HttpHeaders({
             'Content-Type':'application/json'
         });
@@ -22,7 +22,7 @@ export class AdityaBirlaServices{
     postCalculatorgoal(data):Observable<Icalculatorgoal>{
         return this.http.post<Icalculatorgoal>(this.calculatorgoal_post_url, JSON.stringify(data), {headers:this.headers});
     }
-    getGoalData():Observable<Igoal>{
-        return this.http.get<Igoal>(this.goal_get_url);
+    getGoalData():Observable<Igoal[]>{
+        return this.http.get<Igoal[]>(this.goal_get_url);
     }
 }

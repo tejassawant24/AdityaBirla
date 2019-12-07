@@ -1,5 +1,4 @@
-{
-    "totalGoals":[{
+[{
         "goalId": "1",
         "goal": "Retirement"
     },
@@ -40,20 +39,23 @@
         "goal": "Child's Education"
     },
     {
+        "goalId": "11",
+        "goal": "Child's marriage"
+    },
+    {
         "goalId": "12",
         "goal": "World Tour"
     },
     {
-
+        "goalId": "13",
+        "goal": "Wealth Creation "
     },
     {
-
+        "goalId": "14",
+        "goal": "Follow passion"
     },
     {
-
-    },
-    {
-
+        "goalId": "15",
+        "goal": "Philanthropy"
     }
 ]
-}

@@ -14,7 +14,7 @@ import { AdityaBirlaServices } from "../../Shared/Services/calculatorgoal.servic
 @Component({
   selector: "app-calculatorgoal",
   templateUrl: "./calculatorgoal.component.html",
-  styleUrls: ["./calculatorgoal.component.css"]
+  styleUrls: [/*"./calculatorgoal.component.css"*/]
 })
 export class CalculatorgoalComponent implements OnInit {
   public userForm: FormGroup;

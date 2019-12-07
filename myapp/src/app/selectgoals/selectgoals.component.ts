@@ -13,8 +13,8 @@ import { AdityaBirlaServices } from 'src/Shared/Services/calculatorgoal.services
   styleUrls: ['./selectgoals.component.css']
 })
 export class SelectgoalsComponent implements OnInit {
- public goals:Igoal
-public abc=1;
+ public goals:Igoal[]
+
 
   constructor(  private router : Router, private abs: AdityaBirlaServices) { }
 
@@ -24,7 +24,57 @@ public abc=1;
       this.goals=data;
       console.log(this.goals[0].goal);
     });
-  }
+
+  //   let images=[
+  //   {
+  //    image: "../../assets/img/retirement color icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/holiday icon.png"
+  //   },
+  //   {
+  //     image:"../../assets//img/honeymoon icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/marriege icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/luxury car icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/bike color icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/luxury car icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/starting business icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/self development icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/child's education icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/child's marriege color icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/world tour icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/wealth creation icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/follow passion icon.png"
+  //   },
+  //   {
+  //     image:"../../assets/img/Philanthropy icon.png"
+  //   }
+  // ]
+  // console.log(images[0].image)
+   }
+
 
   // test() {
   //   console.log(this.router.config)
@@ -34,13 +84,13 @@ public abc=1;
   //   this.router.navigateByUrl('/goals');
   // }
 
-  addRetirement(){
-    let retirement ={
-      id:1,
-      goal:"Retiremnet",
-      img:"../../assets/img/retirement color icon.png"
-    }
-  }  
+  // addRetirement(){
+  //   let retirement ={
+  //     id:1,
+  //     goal:"Retiremnet",
+  //     img:"../../assets/img/retirement color icon.png"
+  //   }
+  // }  
   //        this.goals.push(retirement);
          
        

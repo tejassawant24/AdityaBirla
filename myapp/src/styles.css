@@ -242,8 +242,10 @@ input{
     height: 20px;  
     box-shadow: 0 4px 5px 0 rgba(0,0,50,0.5);
     text-align: center;
+    position: relative;
     /* margin-bottom: 30px; */
 }
+
 .form img{
 	height: 80px;
 	width: 80px;
@@ -272,7 +274,7 @@ margin-bottom: 5px;
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  /*margin-bottom: 30px;*/
+  margin-bottom: 10px;
  }
 .form span.switcher input{
   -webkit-appearance: none;
@@ -307,10 +309,10 @@ margin-bottom: 5px;
 .form span.switcher label {
     z-index: 1;
     position: absolute;
-    /*top: 4px;
-    bottom: 7px;*/
     top: 4px;
-    bottom: 14px;
+    bottom: 7px;
+    /* top: 4px;
+    bottom: 14px; */
     border-radius: 24px;
 }
 .form span.switcher.switcher-1 input {
@@ -328,10 +330,10 @@ margin-bottom: 5px;
   transition: color .5s;
 }
 .form span.switcher.switcher-1 input:checked + label {
-  /* left: 3px;
-  right: 120px; */
-  left: 19px;
-  right: 111px;
+  left: 3px;
+  right: 120px;
+  /* left: 19px;
+  right: 111px; */
   background: #FF8C00;
   transition: left .5s, right .4s .2s;
 }
@@ -348,8 +350,10 @@ margin-bottom: 5px;
   transition: color .5s .2s;
 }
 .form span.switcher.switcher-1 input:not(:checked) + label {
-  left: 91px;
-    right: 25px;
+  /* left: 91px;
+    right: 25px; */
+    left: 82px;
+    right: 34px;
   background: #FF8C00;
   transition: left .4s .2s, right .5s, background .35s -.1s;
 
@@ -397,6 +401,7 @@ margin-right: 40px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: absolute;
   }
 .form1 span.switcher {
   position: relative;
@@ -439,7 +444,7 @@ margin-right: 40px;
   z-index: 1;
   position: absolute;
   top: 4px;
-  bottom: 15px;
+  bottom: 7px;
   border-radius: 24px;
 }
 .form1 span.switcher.switcher-2 input {
@@ -457,10 +462,10 @@ margin-right: 40px;
   transition: color .5s;
 }
 .form1 span.switcher.switcher-2 input:checked + label {
-  /* left: 3px;
-  right: 116px; */
-  left: 18px;
-  right: 109px;
+  left: 3px;
+  right: 116px;
+  /* left: 18px;
+  right: 109px; */
   background: #FF8C00;
   transition: left .5s, right .4s .2s;
 }
@@ -477,10 +482,10 @@ margin-right: 40px;
   transition: color .5s .2s;
 }
 .form1 span.switcher.switcher-2 input:not(:checked) + label {
-  /* left: 81px;
-    right: 23px; */
-    left: 90px;
-    right: 16px;
+  left: 81px;
+    right: 23px;
+    /* left: 90px;
+    right: 16px; */
   background: #FF8C00;
   transition: left .4s .2s, right .5s, background .35s -.1s;
 }
@@ -489,7 +494,7 @@ margin-right: 40px;
 
 .kids{
 	margin-bottom: 24px;
-     margin-left: 30px;
+     margin-left: -30px;
 }
 #ip3 {
     border-radius: 45px;
@@ -549,7 +554,7 @@ display: inline-block;
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  margin-bottom: 7px;
+  margin-bottom: 0px;
   }
 .form2 span.switcher input {
   -webkit-appearance: none;
@@ -587,7 +592,7 @@ display: inline-block;
   z-index: 1;
   position: absolute;
   top: 4px;
-    bottom: 15px;
+    bottom: 7px;
     border-radius: 24px;
 }
 .form2 span.switcher.switcher-3 input {
@@ -605,8 +610,8 @@ display: inline-block;
   transition: color .5s;
 }
 .form2 span.switcher.switcher-3 input:checked + label {
-  left: 15px;
-  right: 97px;
+  left: 4px;
+  right: 114px;
   background: #FF8C00;
   transition: left .5s, right .4s .2s;
 }
@@ -623,13 +628,13 @@ display: inline-block;
   transition: color .5s .2s;
 }
 .form2 span.switcher.switcher-3 input:not(:checked) + label {
-  left: 92px;
-    right: 14px;
+  left: 85px;
+    right: 23px;
   background: #FF8C00;
   transition: left .4s .2s, right .5s, background .35s -.1s;
 }
 .profession{
-	margin-top: -10px;
+	margin-top: 30px;
 	margin-bottom: 10px;
 	margin-left: 250px;
 }
@@ -699,7 +704,7 @@ margin-bottom: 5px;margin-right: 60px;
   z-index: 1;
   position: absolute;
   top: 4px;
-    bottom: 15px;
+    bottom: 7px;
     border-radius: 24px;
 }
 .form3 span.switcher.switcher-4 input {
@@ -717,8 +722,8 @@ margin-bottom: 5px;margin-right: 60px;
   transition: color .5s;
 }
 .form3 span.switcher.switcher-4 input:checked + label {
-  left: 9px;
-  right: 117px;
+  left: 4px;
+  right: 118px;
   background: #FF8C00;
   transition: left .5s, right .4s .2s;
 }
@@ -735,8 +740,8 @@ margin-bottom: 5px;margin-right: 60px;
   transition: color .5s .2s;
 }
 .form3 span.switcher.switcher-4 input:not(:checked) + label {
-    left: 83px;
-    right: 8px;
+    left: 77px;
+    right: 13px;
   background: #FF8C00;
   transition: left .4s .2s, right .5s, background .35s -.1s;
 }
