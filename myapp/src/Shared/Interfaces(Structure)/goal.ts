@@ -1,4 +1,4 @@
 export interface Igoal{
-    goalId:string,
+    goalId:number,
     goal:string,
 }

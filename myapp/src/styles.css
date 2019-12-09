@@ -233,7 +233,11 @@ input{
 .users{
 	 border-left: 2px solid #fff;
 }
-
+.validation-name{
+  position: absolute;
+  margin-top: 59px;
+  color: black;
+}
 #ip2 {
     border-radius: 45px;
     border: none;
@@ -402,13 +406,14 @@ margin-right: 40px;
   align-items: center;
   justify-content: center;
   position: absolute;
+  margin-top:20px;
   }
 .form1 span.switcher {
   position: relative;
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  margin-bottom: 30px;
+  
 }
 .form1 span.switcher input {
   -webkit-appearance: none;
@@ -546,7 +551,7 @@ display: inline-block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  
   margin-right:82px;
   }
 .form2 span.switcher {
@@ -634,7 +639,7 @@ display: inline-block;
   transition: left .4s .2s, right .5s, background .35s -.1s;
 }
 .profession{
-	margin-top: 30px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 250px;
 }
@@ -1300,3 +1305,26 @@ width: 115PX;
     font-size: 19px;
 }
 }
+@media only screen and (max-width: 600px) {
+  .users {
+      border-left: none;
+      margin-top: 40px;
+  }
+  .form1 {
+    margin-left: 50px;
+  }
+  .user{
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+  .form2 {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border-left: none;
+  }
+  .kids{
+    margin-left:0px;
+  }
+  .form3{margin-left: 84px;}
+  }
+  

@@ -10,20 +10,37 @@ import { AdityaBirlaServices } from 'src/Shared/Services/calculatorgoal.services
 @Component({
   selector: 'app-selectgoals',
   templateUrl: './selectgoals.component.html',
-  styleUrls: ['./selectgoals.component.css']
+  styleUrls: [/*'./selectgoals.component.css'*/]
 })
 export class SelectgoalsComponent implements OnInit {
- public goals:Igoal[]
+ public goals:Igoal[]=[];
+ public isRetirementPresent:boolean=false;
+ public isHolidayPresent:boolean=false;
+ public isHoneymoonPresent:boolean=false;
+ public isMarriagePresent:boolean=false;
+ public isCarPresent:boolean=false;
+ public isBikePresent:boolean=false;
+ public isLuxuryCarPresent:boolean=false;
+ public isStartingBusinessPresent:boolean=false;
+ public isSelfDevelopmentPresent:boolean=false;
+ public isChildsEducationPresent:boolean=false;
+ public isChildsMarriagePresent:boolean=false;
+ public isWorldTourPresent:boolean=false;
+ public isWealthCreationPresent:boolean=false;
+ public isFollowPassionPresent:boolean=false;
+ public isPhilanthropyPresent:boolean=false;
+ 
+
 
 
   constructor(  private router : Router, private abs: AdityaBirlaServices) { }
 
   ngOnInit() {
-    this.abs.getGoalData().subscribe(data=>{
-      console.log(data);
-      this.goals=data;
-      console.log(this.goals[0].goal);
-    });
+    // this.abs.getGoalData().subscribe(data=>{
+    //   console.log(data);
+    //   this.goals=data;
+    //   console.log(this.goals[0].goal);
+    // });
 
   //   let images=[
   //   {
@@ -84,32 +101,304 @@ export class SelectgoalsComponent implements OnInit {
   //   this.router.navigateByUrl('/goals');
   // }
 
-  // addRetirement(){
-  //   let retirement ={
-  //     id:1,
-  //     goal:"Retiremnet",
-  //     img:"../../assets/img/retirement color icon.png"
-  //   }
-  // }  
-  //        this.goals.push(retirement);
-         
-       
-  // }
 
-  // addHoliday(){
-  //   let holiday ={
-  //     id:2,
-  //     goal:"Holiday",
-  //     img:"../../assets/img/retirement color icon.png"
-  //   }
+//Adding Goals
+  addRetirement(){
+    if(this.goals.length < 3 && this.isRetirementPresent==false){
+      var Retirement ={
+        goalId:1,
+        goal:"Retirement",
+      }
+      this.goals.push(Retirement);
+      this.isRetirementPresent=true;
+      console.log(this.goals);
+      console.log(this.isRetirementPresent);
+    }
+     else if(this.goals.length < 3 && this.isRetirementPresent==true){
+    let data="Retirement";
+    this.isRetirementPresent=false
+     this.removeData(data);
+    }
+
+  }  
+
+  addHoliday(){
+      if(this.goals.length < 3 && this.isHolidayPresent==false){
+        var Holiday ={
+          goalId:2,
+          goal:"Holiday",
+        }
+        this.goals.push(Holiday);
+        this.isHolidayPresent=true;
+        console.log(this.goals);
+        console.log(this.isHolidayPresent)
+      }
+       else if(this.goals.length < 3 && this.isHolidayPresent==true){
+      let data="Holiday";
+      this.isHolidayPresent=false
+       this.removeData(data);
+      }
+  }
+
+  addHoneymoon(){
+    if(this.goals.length < 3 && this.isHoneymoonPresent==false){
+      var Honeymoon ={
+        goalId:1,
+        goal:"Honeymoon",
+      }
+      this.goals.push(Honeymoon);
+      this.isHoneymoonPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isHoneymoonPresent==true){
+    let data="Honeymoon";
+    this.isHoneymoonPresent=false
+     this.removeData(data);
+    }
+
+  } 
+
+  addMarriage(){
+    if(this.goals.length < 3 && this.isMarriagePresent==false){
+      var Marriage ={
+        goalId:1,
+        goal:"Marriage",
+      }
+      this.goals.push(Marriage);
+      this.isMarriagePresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isMarriagePresent==true){
+    let data="Marriage";
+    this.isMarriagePresent=false
+
+     this.removeData(data);
+    }
+
+  } 
+
+  addCar(){
+    if(this.goals.length < 3 && this.isCarPresent==false){
+      var Car ={
+        goalId:1,
+        goal:"Car",
+      }
+      this.goals.push(Car);
+      this.isCarPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isCarPresent==true){
+    let data="Car";
+    this.isCarPresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addBike(){
+    if(this.goals.length < 3 && this.isBikePresent==false){
+      var Bike ={
+        goalId:1,
+        goal:"Bike",
+      }
+      this.goals.push(Bike);
+      this.isBikePresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isBikePresent==true){
+    let data="Bike";
+    this.isBikePresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addLuxuryCar(){
+    if(this.goals.length < 3 && this.isLuxuryCarPresent==false){
+      var LuxuryCar ={
+        goalId:1,
+        goal:LuxuryCar
+      }
+      this.isLuxuryCarPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isLuxuryCarPresent==true){
+    let data="Luxury Car";
+    this.isLuxuryCarPresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addStartingBusiness(){
+    if(this.goals.length < 3 && this.isStartingBusinessPresent==false){
+      var StartingBusines ={
+        goalId:1,
+        goal:"Starting Busines",
+      }
+      this.goals.push(StartingBusines);
+      this.isStartingBusinessPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isStartingBusinessPresent==true){
+    let data="Starting Busines";
+    this.isStartingBusinessPresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addSelfDevelopment(){
+    if(this.goals.length < 3 && this.isSelfDevelopmentPresent==false){
+      var SelfDevelopment ={
+        goalId:1,
+        goal:"Self Development",
+      }
+      this.goals.push(SelfDevelopment);
+      this.isSelfDevelopmentPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isSelfDevelopmentPresent==true){
+    let data="Self Development";
+    this.isSelfDevelopmentPresent=false
+     this.removeData(data);
+    }
+
+  }
+  
+  addChildsEducation(){
+    if(this.goals.length < 3 && this.isChildsEducationPresent==false){
+      var ChildsEducation ={
+        goalId:1,
+        goal:"Childs Education",
+      }
+      this.goals.push(ChildsEducation);
+      this.isChildsEducationPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isChildsEducationPresent==true){
+    let data="Childs Education";
+    this.isChildsEducationPresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addChildsMarriage(){
+    if(this.goals.length < 3 && this.isChildsMarriagePresent==false){
+      var ChildsMarriage ={
+        goalId:1,
+        goal:"Childs Marriage",
+      }
+      this.goals.push(ChildsMarriage);
+      this.isChildsMarriagePresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isChildsMarriagePresent==true){
+    let data="Childs Marriage";
+    this.isChildsMarriagePresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addWorldTour(){
+    if(this.goals.length < 3 && this.isWorldTourPresent==false){
+      var WorldTour ={
+        goalId:1,
+        goal:"World Tour",
+      }
+      this.goals.push(WorldTour);
+      this.isWorldTourPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isWorldTourPresent==true){
+    let data="World Tour";
+    this.isWorldTourPresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addWealthCreation(){
+    if(this.goals.length < 3 && this.isWealthCreationPresent==false){
+      var WealthCreation ={
+        goalId:1,
+        goal:"Wealth Creation",
+      }
+      this.goals.push(WealthCreation);
+      this.isWealthCreationPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isWealthCreationPresent==true){
+    let data="Wealth Creation";
+    this.isWealthCreationPresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  addFollowPassion(){
+    if(this.goals.length < 3 && this.isFollowPassionPresent==false){
+      var FollowPassion ={
+        goalId:1,
+        goal:"Follow Passion",
+      }
+      this.goals.push(FollowPassion);
+      this.isFollowPassionPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isFollowPassionPresent==true){
+    let data="Follow Passion";
+    this.isFollowPassionPresent=false
+     this.removeData(data);
+    }
+
+  } 
+
+    
+  addPhilanthropy(){
+    if(this.goals.length < 3 && this.isPhilanthropyPresent==false){
+      var Philanthropy ={
+        goalId:1,
+        goal:"Philanthropy",
+      }
+      this.goals.push(Philanthropy);
+      this.isPhilanthropyPresent=true;
+      console.log(this.goals)
+    }
+     else if(this.goals.length < 3 && this.isPhilanthropyPresent==true){
+    let data="Philanthropy";
+    this.isPhilanthropyPresent=false
+     this.removeData(data);
+    }
+
+  } 
+  
+  
+
+  
+
+//Removing Goals  
+removeData(value){
+  console.log("data removed");
+  for(let i=0; i<this.goals.length;i++){
+    console.log(i)
+    if(this.goals[i].goal==value){
+      console.log("if statement excecuted successfully")
+      this.goals.splice(i,1);
+      console.log(this.goals);
+    }
+    console.log(this.goals);
+    
+  }
+}
+         
+}
+
   
   // }
-  // addHoneymoon(){
-  //   let honey ={
-  //     id:3,
-  //     goal:"Honeymoon",
-  //     img:"../../assets/img/retirement color icon.png"
-  //   }
+  
     
     
 
@@ -130,7 +419,7 @@ export class SelectgoalsComponent implements OnInit {
   //     goal:"Car",
   //     img:"../../assets/img/retirement color icon.png"
   //   }
-  
+ 
   // }
   // addBike(){
   //   let bike ={
@@ -250,4 +539,5 @@ export class SelectgoalsComponent implements OnInit {
 
 
  
-}
+
+

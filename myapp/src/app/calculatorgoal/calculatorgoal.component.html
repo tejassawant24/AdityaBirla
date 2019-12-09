@@ -77,17 +77,17 @@
             <div class="col-md-6 text-right d-flex align-content-center flex-wrap form-group">
 
               <input type="text" id="ip2" placeholder="ENTER NAME" formControlName="name" />
-
-              <!--Validation for name-->
-              <div class="alert" *ngIf="userForm.get('name').hasError('required') &&  submitted">
-                *name is required*
-              </div>
-              <div class="alert"
-                *ngIf="!userForm.get('name').valid && !userForm.get('name').hasError('required') && submitted">
-                *valid name is required*
-              </div>
-
+                <!--Validation for name-->
+                <span class=" validation-name" *ngIf="userForm.get('name').hasError('required') &&  submitted">
+                  *name is required*
+                </span>
+                <span class="alert"
+                  *ngIf="!userForm.get('name').valid && !userForm.get('name').hasError('required') && submitted">
+                  *valid name is required*
+              </span>
             </div>
+                
+    
 
 
             <div class="col-md-6 users">
@@ -144,7 +144,7 @@
                   <li><img src="../../assets/img/1 baby icon.png" (click)="kid1()"></li>
                   <li><img src="../../assets/img/2 baby icon.png" (click)="kid2()"></li>
                   <li><img src="../../assets/img/3 baby icon.png" (click)="kid3()" style="width: 40px;"></li>
-                  <li><img src="../../assets/img/4 baby.png" style="width: 50px;" (click)="kid4()"></li>
+                  <li style="border-right:none;"><img src="../../assets/img/4 baby.png" style="width: 50px;" (click)="kid4()"></li>
                   <input *ngIf="userForm.value.child == true" value="{{numberOfKids}}" class=form-control type="text"
                     id="ip3" placeholder="2" formControlName="kids" />
                   <!--Validation for kids-->
