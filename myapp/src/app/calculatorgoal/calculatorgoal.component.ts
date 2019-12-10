@@ -39,7 +39,7 @@ export class CalculatorgoalComponent implements OnInit {
       gender: [true],
       maritalStatus: [true],
       child: [false],
-      kids: [0, [Regx.kids]],
+      kids: [ [Regx.kids]],
       profession: [false]
     });
 

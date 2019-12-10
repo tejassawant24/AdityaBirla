@@ -100,8 +100,13 @@ export class SelectgoalsComponent implements OnInit {
   //   route.data = { entity: 'entity' };
   //   this.router.navigateByUrl('/goals');
   // }
+ 
 
-
+postData(){
+    this.abs.postGoalData(this.goals).subscribe(data=>{
+      console.log(data);
+  });  
+} 
 //Adding Goals
   addRetirement(){
     if(this.goals.length < 3 && this.isRetirementPresent==false){

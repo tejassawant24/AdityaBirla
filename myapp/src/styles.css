@@ -1305,8 +1305,21 @@ width: 115PX;
     font-size: 19px;
 }
 }
-@media only screen and (max-width: 600px) {
-  .users {
+@media only screen and (max-width: 600px){
+  .marrial{
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .users{
+    border-left: none;
+  }
+  .form2 {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    border-left: none;
+  }
+  .kids{ margin-left:0px;}
+  /* .users {
       border-left: none;
       margin-top: 40px;
   }
@@ -1325,6 +1338,6 @@ width: 115PX;
   .kids{
     margin-left:0px;
   }
-  .form3{margin-left: 84px;}
+  .form3{margin-left: 84px;}  */
   }
   
