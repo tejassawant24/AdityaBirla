@@ -114,7 +114,7 @@ export class SelectgoalsComponent implements OnInit {
       console.log(this.goals);
       console.log(this.isRetirementPresent);
     }
-     else if(this.goals.length < 3 && this.isRetirementPresent==true){
+     else if(this.goals.length <= 3 && this.isRetirementPresent==true){
     let data="Retirement";
     this.isRetirementPresent=false
      this.removeData(data);
@@ -133,7 +133,7 @@ export class SelectgoalsComponent implements OnInit {
         console.log(this.goals);
         console.log(this.isHolidayPresent)
       }
-       else if(this.goals.length < 3 && this.isHolidayPresent==true){
+       else if(this.goals.length <= 3 && this.isHolidayPresent==true){
       let data="Holiday";
       this.isHolidayPresent=false
        this.removeData(data);
@@ -150,7 +150,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isHoneymoonPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isHoneymoonPresent==true){
+     else if(this.goals.length <= 3 && this.isHoneymoonPresent==true){
     let data="Honeymoon";
     this.isHoneymoonPresent=false
      this.removeData(data);
@@ -168,7 +168,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isMarriagePresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isMarriagePresent==true){
+     else if(this.goals.length <= 3 && this.isMarriagePresent==true){
     let data="Marriage";
     this.isMarriagePresent=false
 
@@ -187,7 +187,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isCarPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isCarPresent==true){
+     else if(this.goals.length <= 3 && this.isCarPresent==true){
     let data="Car";
     this.isCarPresent=false
      this.removeData(data);
@@ -205,7 +205,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isBikePresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isBikePresent==true){
+     else if(this.goals.length <= 3 && this.isBikePresent==true){
     let data="Bike";
     this.isBikePresent=false
      this.removeData(data);
@@ -222,7 +222,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isLuxuryCarPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isLuxuryCarPresent==true){
+     else if(this.goals.length <= 3 && this.isLuxuryCarPresent==true){
     let data="Luxury Car";
     this.isLuxuryCarPresent=false
      this.removeData(data);
@@ -240,7 +240,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isStartingBusinessPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isStartingBusinessPresent==true){
+     else if(this.goals.length <= 3 && this.isStartingBusinessPresent==true){
     let data="Starting Busines";
     this.isStartingBusinessPresent=false
      this.removeData(data);
@@ -258,7 +258,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isSelfDevelopmentPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isSelfDevelopmentPresent==true){
+     else if(this.goals.length <= 3 && this.isSelfDevelopmentPresent==true){
     let data="Self Development";
     this.isSelfDevelopmentPresent=false
      this.removeData(data);
@@ -276,7 +276,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isChildsEducationPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isChildsEducationPresent==true){
+     else if(this.goals.length <= 3 && this.isChildsEducationPresent==true){
     let data="Childs Education";
     this.isChildsEducationPresent=false
      this.removeData(data);
@@ -294,7 +294,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isChildsMarriagePresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isChildsMarriagePresent==true){
+     else if(this.goals.length <= 3 && this.isChildsMarriagePresent==true){
     let data="Childs Marriage";
     this.isChildsMarriagePresent=false
      this.removeData(data);
@@ -312,7 +312,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isWorldTourPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isWorldTourPresent==true){
+     else if(this.goals.length <= 3 && this.isWorldTourPresent==true){
     let data="World Tour";
     this.isWorldTourPresent=false
      this.removeData(data);
@@ -330,7 +330,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isWealthCreationPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isWealthCreationPresent==true){
+     else if(this.goals.length <= 3 && this.isWealthCreationPresent==true){
     let data="Wealth Creation";
     this.isWealthCreationPresent=false
      this.removeData(data);
@@ -348,7 +348,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isFollowPassionPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isFollowPassionPresent==true){
+     else if(this.goals.length <= 3 && this.isFollowPassionPresent==true){
     let data="Follow Passion";
     this.isFollowPassionPresent=false
      this.removeData(data);
@@ -367,7 +367,7 @@ export class SelectgoalsComponent implements OnInit {
       this.isPhilanthropyPresent=true;
       console.log(this.goals)
     }
-     else if(this.goals.length < 3 && this.isPhilanthropyPresent==true){
+     else if(this.goals.length <= 3 && this.isPhilanthropyPresent==true){
     let data="Philanthropy";
     this.isPhilanthropyPresent=false
      this.removeData(data);

@@ -162,7 +162,7 @@ export class CalculatorgoalComponent implements OnInit {
     this.submitted = true;
     console.log(this.userForm.valid);
    
-
+    //
     if (this.userForm.value.gender == true) {
       data.gender = "Male";
     }
@@ -174,9 +174,6 @@ export class CalculatorgoalComponent implements OnInit {
       data.maritalStatus = "Married";
     }
 
-    if (this.userForm.value.maritalStatus == true) {      //kids error
-      data.maritalStatus = "Married";
-    }
     if (this.userForm.value.maritalStatus == false) {
       data.maritalStatus = "Unmarried";
     }
@@ -196,21 +193,24 @@ export class CalculatorgoalComponent implements OnInit {
     }
 
     //Validation for no. of kids
-    if (this.userForm.value.child == false) {
+    if (this.userForm.value.child == "None") {
       data.kids = 0;
     } 
-    else if (this.userForm.value.kids === 0) {
+    else if (this.userForm.value.child === "Yes" && this.userForm.value.kids===0) {
        console.log(this.userForm.value.kids)
         return this.validator = "*Please enter number of Kids*";
         
       }
-
+    
+    //Routing
     if (this.userForm.valid) {
       this.router.navigateByUrl("/selectgoals");
     } else {
       this.router.navigateByUrl("/calculatorgoal");
     }
     console.log(data);
+
+    //Sending Data to Backend
     if (this.userForm.valid) {
       this.abs.postCalculatorgoal(data).subscribe(item => {
         console.log(item);
