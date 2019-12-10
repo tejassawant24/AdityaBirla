@@ -26,7 +26,7 @@ export class CalculatorgoalComponent implements OnInit {
     "../../assets/img/2nd page images/male self employeed.png";
   public numberOfKids: any;
   public validator: string;
-
+  public xyz : any;
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -37,9 +37,10 @@ export class CalculatorgoalComponent implements OnInit {
     this.userForm = this.fb.group({
       name: ["", [Validators.required, Regx.Name]],
       gender: [true],
+      age:[''],
       maritalStatus: [true],
       child: [false],
-      kids: [ [Regx.kids]],
+      kids: [0, [Regx.kids]],
       profession: [false]
     });
 
@@ -212,9 +213,10 @@ export class CalculatorgoalComponent implements OnInit {
 
     //Sending Data to Backend
     if (this.userForm.valid) {
-      this.abs.postCalculatorgoal(data).subscribe(item => {
-        console.log(item);
-      });
+      this.abs.postCalculatorgoal(data).subscribe((res)=>{
+        this.xyz= res['userid'];
+        console.log(this.xyz)
+      },(err)=>{});
     }
   }
 }

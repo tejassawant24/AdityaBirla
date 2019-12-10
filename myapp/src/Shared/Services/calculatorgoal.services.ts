@@ -7,7 +7,7 @@ import { Igoal } from '../Interfaces(Structure)/goal';
 @Injectable({providedIn:'root'})
 
 export class AdityaBirlaServices{
-    private calculatorgoal_post_url : string = 'http://localhost:3000/users';
+    private calculatorgoal_post_url : string = 'http://localhost:3000/details';
     private goal_post_url :string =" http://localhost:3000/selectgoals";
    
    

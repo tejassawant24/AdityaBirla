@@ -30,6 +30,24 @@ export class SelectgoalsComponent implements OnInit {
  public isFollowPassionPresent:boolean=false;
  public isPhilanthropyPresent:boolean=false;
  
+ //Images
+ public retirementImg="../../assets/img/retirement icon.png";
+ public holidayImg="../../assets/img/holiday icon.png";
+ public honeyMoonImg="../../assets/img/honeymoon icon.png";
+ public marriageImg="../../assets/img/marriege icon.png";
+ public carImg="../../assets/img/car icon.png";
+ public bikeImg="../../assets/img/bike icon.png";
+ public luxuryCarImg="../../assets/img/starting business icon.png";
+ public startingBusinessImg="../../assets/img/starting business icon.png";
+ public selfDevelopmentImg="../../assets/img/self development icon.png";
+ public childsEducationImg="../../assets/img/child's education icon.png";
+ public childsMarriageImg="../../assets/img/child's marriege icon.png";
+ public worldTourImg="../../assets/img/world tour icon.png";
+ public wealthCreationImg="../../assets/img/wealth creation icon.png";
+ public followPassionImg="../../assets/img/follow passion icon.png";
+ public philanthropyImg="../../assets/img/Philanthropy icon.png";
+
+ 
 
 
 
@@ -93,15 +111,8 @@ export class SelectgoalsComponent implements OnInit {
    }
 
 
-  // test() {
-  //   console.log(this.router.config)
-  //   let route = this.router.config.find(r => r.path === 'goals');
-  //   console.log(route)
-  //   route.data = { entity: 'entity' };
-  //   this.router.navigateByUrl('/goals');
-  // }
- 
-
+  // test() {honeyMoonImg= 'goals');
+  //   console.loretirementImg
 postData(){
     this.abs.postGoalData(this.goals).subscribe(data=>{
       console.log(data);
@@ -118,11 +129,14 @@ postData(){
       this.isRetirementPresent=true;
       console.log(this.goals);
       console.log(this.isRetirementPresent);
+      retirementImg
+      
     }
      else if(this.goals.length <= 3 && this.isRetirementPresent==true){
     let data="Retirement";
     this.isRetirementPresent=false
      this.removeData(data);
+     retirementImg
     }
 
   }  
@@ -136,12 +150,14 @@ postData(){
         this.goals.push(Holiday);
         this.isHolidayPresent=true;
         console.log(this.goals);
-        console.log(this.isHolidayPresent)
+        console.log(this.isHolidayPresent);
+        holidayImg
       }
        else if(this.goals.length <= 3 && this.isHolidayPresent==true){
       let data="Holiday";
       this.isHolidayPresent=false
        this.removeData(data);
+       holidayImg
       }
   }
 
@@ -154,11 +170,13 @@ postData(){
       this.goals.push(Honeymoon);
       this.isHoneymoonPresent=true;
       console.log(this.goals)
+      honeyMoonImg
     }
      else if(this.goals.length <= 3 && this.isHoneymoonPresent==true){
     let data="Honeymoon";
     this.isHoneymoonPresent=false
      this.removeData(data);
+     honeyMoonImg
     }
 
   } 
@@ -171,11 +189,13 @@ postData(){
       }
       this.goals.push(Marriage);
       this.isMarriagePresent=true;
-      console.log(this.goals)
+      console.log(this.goals);
+      marriageImg
     }
      else if(this.goals.length <= 3 && this.isMarriagePresent==true){
     let data="Marriage";
     this.isMarriagePresent=false
+    marriageImg
 
      this.removeData(data);
     }
@@ -190,12 +210,14 @@ postData(){
       }
       this.goals.push(Car);
       this.isCarPresent=true;
-      console.log(this.goals)
+      console.log(this.goals);
+      carImg
     }
      else if(this.goals.length <= 3 && this.isCarPresent==true){
     let data="Car";
     this.isCarPresent=false
      this.removeData(data);
+     carImg
     }
 
   } 
@@ -208,12 +230,14 @@ postData(){
       }
       this.goals.push(Bike);
       this.isBikePresent=true;
-      console.log(this.goals)
+      console.log(this.goals);
+      bikeImg
     }
      else if(this.goals.length <= 3 && this.isBikePresent==true){
     let data="Bike";
     this.isBikePresent=false
      this.removeData(data);
+     bikeImg
     }
 
   } 
@@ -225,12 +249,14 @@ postData(){
         goal:LuxuryCar
       }
       this.isLuxuryCarPresent=true;
-      console.log(this.goals)
+      console.log(this.goals);
+      luxuryCarImg
     }
      else if(this.goals.length <= 3 && this.isLuxuryCarPresent==true){
     let data="Luxury Car";
     this.isLuxuryCarPresent=false
      this.removeData(data);
+     luxuryCarImg
     }
 
   } 
@@ -244,11 +270,13 @@ postData(){
       this.goals.push(StartingBusines);
       this.isStartingBusinessPresent=true;
       console.log(this.goals)
+      startingBusinessImg
     }
      else if(this.goals.length <= 3 && this.isStartingBusinessPresent==true){
     let data="Starting Busines";
     this.isStartingBusinessPresent=false
      this.removeData(data);
+     startingBusinessImg
     }
 
   } 
@@ -262,11 +290,14 @@ postData(){
       this.goals.push(SelfDevelopment);
       this.isSelfDevelopmentPresent=true;
       console.log(this.goals)
+      selfDevelopmentImg
     }
      else if(this.goals.length <= 3 && this.isSelfDevelopmentPresent==true){
     let data="Self Development";
     this.isSelfDevelopmentPresent=false
      this.removeData(data);
+     selfDevelopmentImg
+     
     }
 
   }
@@ -280,11 +311,13 @@ postData(){
       this.goals.push(ChildsEducation);
       this.isChildsEducationPresent=true;
       console.log(this.goals)
+      childsEducationImg
     }
      else if(this.goals.length <= 3 && this.isChildsEducationPresent==true){
     let data="Childs Education";
     this.isChildsEducationPresent=false
      this.removeData(data);
+     childsEducationImg
     }
 
   } 
@@ -298,11 +331,13 @@ postData(){
       this.goals.push(ChildsMarriage);
       this.isChildsMarriagePresent=true;
       console.log(this.goals)
+      childsMarriageImg
     }
      else if(this.goals.length <= 3 && this.isChildsMarriagePresent==true){
     let data="Childs Marriage";
     this.isChildsMarriagePresent=false
      this.removeData(data);
+     childsMarriageImg
     }
 
   } 
@@ -316,11 +351,13 @@ postData(){
       this.goals.push(WorldTour);
       this.isWorldTourPresent=true;
       console.log(this.goals)
+      worldTourImg
     }
      else if(this.goals.length <= 3 && this.isWorldTourPresent==true){
     let data="World Tour";
     this.isWorldTourPresent=false
      this.removeData(data);
+     worldTourImg
     }
 
   } 
@@ -333,12 +370,14 @@ postData(){
       }
       this.goals.push(WealthCreation);
       this.isWealthCreationPresent=true;
-      console.log(this.goals)
+      console.log(this.goals);
+      wealthCreationImg
     }
      else if(this.goals.length <= 3 && this.isWealthCreationPresent==true){
     let data="Wealth Creation";
     this.isWealthCreationPresent=false
      this.removeData(data);
+     wealthCreationImg
     }
 
   } 
@@ -352,11 +391,13 @@ postData(){
       this.goals.push(FollowPassion);
       this.isFollowPassionPresent=true;
       console.log(this.goals)
+      followPassionImg
     }
      else if(this.goals.length <= 3 && this.isFollowPassionPresent==true){
     let data="Follow Passion";
     this.isFollowPassionPresent=false
      this.removeData(data);
+     followPassionImg
     }
 
   } 
@@ -371,11 +412,13 @@ postData(){
       this.goals.push(Philanthropy);
       this.isPhilanthropyPresent=true;
       console.log(this.goals)
+      philanthropyImg
     }
      else if(this.goals.length <= 3 && this.isPhilanthropyPresent==true){
     let data="Philanthropy";
     this.isPhilanthropyPresent=false
      this.removeData(data);
+     philanthropyImg
     }
 
   } 
@@ -404,7 +447,7 @@ removeData(value){
   
   // }
   
-    
+  philanthropyImg
     
 
   // }

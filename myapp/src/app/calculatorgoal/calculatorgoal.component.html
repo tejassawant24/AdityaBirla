@@ -112,7 +112,6 @@
 						</div>
 					</div>-->
 
-
         <div class="marrial">
           <div class="row">
             <div class="col-md-6 user d-flex">
@@ -128,7 +127,7 @@
               </div>
             </div>
 
-            <div *ngIf="userForm.value.maritalStatus=='Married' || true" class="col-md-6 kids form-group">
+            <div *ngIf="userForm.value.maritalStatus==true" class="col-md-6 kids form-group">
               <div class="form2 ">
 
                 <p><strong>KIDS</strong></p>
@@ -180,7 +179,9 @@
           </div>
         </div>
 
-
+        <div>
+          <input type="number" formControlName="age" placeholder="enter age">
+        </div>
 
         <div class="row">
           <div class=" col-md-12 lastbtns form-group">
