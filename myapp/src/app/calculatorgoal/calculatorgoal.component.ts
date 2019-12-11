@@ -159,43 +159,45 @@ export class CalculatorgoalComponent implements OnInit {
   }
 
   //Data coming from Reactive form on click event
-  Save(data: Icalculatorgoal) {
+  Save() {
+    let formJson: any = {};
+
     this.submitted = true;
     console.log(this.userForm.valid);
    
     //xyz
     if (this.userForm.value.gender == true) {
-      data.gender = "Male";
+      formJson.gender = "Male";
     }
     if (this.userForm.value.gender == false) {
-      data.gender = "Female";
+      formJson.gender = "Female";
     }
 
-    if (this.userForm.value.maritalStatus == true) {       //no. of kids error
-      data.maritalStatus = "Married";
+    if (this.userForm.value.maritalStatus) {       //no. of kids error
+      formJson.maritalStatus = "Married";
+      console.log(this.userForm.value.maritalStatus);
     }
-
-    if (this.userForm.value.maritalStatus == false) {
-      data.maritalStatus = "Unmarried";
+    else {
+      formJson.maritalStatus = "Unmarried";
     }
 
     if (this.userForm.value.child == true) {               //no. of kids error
-      data.child = "Yes";
+      formJson.child = "Yes";
     }
     if (this.userForm.value.child == false) {
-      data.child = "None";
+      formJson.child = "None";
     }
 
     if (this.userForm.value.profession == true) {
-      data.profession = "Salaried";
+      formJson.profession = "Salaried";
     }
     if (this.userForm.value.profession == false) {
-      data.profession = "Self-Employed";
+      formJson.profession = "Self-Employed";
     }
 
     //Validation for no. of kids
     if (this.userForm.value.child == "None") {
-      data.kids = 0;
+      formJson.kids = 0;
     } 
     else if (this.userForm.value.child === "Yes" && this.userForm.value.kids===0) {
        console.log(this.userForm.value.kids)
@@ -209,11 +211,11 @@ export class CalculatorgoalComponent implements OnInit {
     } else {
       this.router.navigateByUrl("/calculatorgoal");
     }
-    console.log(data);
+    console.log(formJson);
 
     //Sending Data to Backend
     if (this.userForm.valid) {
-      this.abs.postUserDetails("details",data).subscribe((res)=>{
+      this.abs.postUserDetails("details",formJson).subscribe((res)=>{
         this.uid= res['userid'];
         //Setting uid in Local Storage
         localStorage.setItem('id',this.uid);

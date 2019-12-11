@@ -90,14 +90,21 @@
 			
 			<div class="dropdown-style">
     		<div class="row">
-    			<div class="col-md-4 col-sm-6  dropdowns">
-    				<p>At what age you plan to retire?</p>
-    				<div class="dropdown">
+    			<div class="col-md-4 col-sm-6  dropdowns" *ngFor="let questions of goalQuestion ">
+					<!-- <p>At what age you plan to retire?</p> -->
+					<p>{{questions.questions.name}}</p>
+    				<!-- <div class="dropdown">
                        <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">50</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					    
 						</div>
-                    </div>
+					</div> -->
+					<select class="dropdown" [(ngModel)]="answer">
+						<options *ngFor="let options of questions.questions.option" value="options.value" >{{options.name}} </options> 
+						 
+					
+						</select>
+					
     			</div>
 
     			<div class="col-md-4 col-sm-6 dropdowns">

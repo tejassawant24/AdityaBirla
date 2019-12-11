@@ -69,7 +69,7 @@
 
 
       <!-------start form------------->
-      <form [formGroup]="userForm" class="form-horizontal" role="form" (ngSubmit)="Save(userForm.value)">
+      <form [formGroup]="userForm" class="form-horizontal" role="form" (ngSubmit)="Save()">
 
         <div class="form-details">
           <div class="row">
@@ -127,6 +127,7 @@
               </div>
             </div>
 
+            {{userForm.value.maritalStatus}}
             <div *ngIf="userForm.value.maritalStatus==true" class="col-md-6 kids form-group">
               <div class="form2 ">
 
