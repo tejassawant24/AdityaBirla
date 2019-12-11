@@ -1,23 +1,39 @@
 {
   "user": [
+    // {
+    //   "name": "Deepali",
+    //   "gender": "Male",
+    //   "maritalStatus": "Married",
+    //   "child": "None",
+    //   "kids": "0",
+    //   "profession": "Self-Employed",
+    //   "id": 2
+    // },
+    
     {
-      "name": "Deepali",
-      "gender": "Male",
-      "maritalStatus": "Married",
-      "child": "None",
-      "kids": "0",
-      "profession": "Self-Employed",
-      "id": 2
+
+    
+    "userId":"rrtgg4454545"
+    {
+      "goalId":"1",
+      "goal":"Retirement"
     },
     {
-      "name": "tejas",
-      "gender": "Male",
-      "maritalStatus": "Married",
-      "child": "Yes",
-      "kids": "5",
-      "profession": "Salaried",
-      "id": 3
+      "goalId":"2",
+      "goal":"Retirement"
     },
+
+  }
+    
+    // {
+    //   "name": "tejas",
+    //   "gender": "Male",
+    //   "maritalStatus": "Married",
+    //   "child": "Yes",
+    //   "kids": "5",
+    //   "profession": "Salaried",
+    //   "id": 3
+    // },
     {
       "name": "rr",
       "gender": "Male",
