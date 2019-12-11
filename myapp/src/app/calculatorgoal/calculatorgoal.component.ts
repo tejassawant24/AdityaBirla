@@ -213,7 +213,7 @@ export class CalculatorgoalComponent implements OnInit {
 
     //Sending Data to Backend
     if (this.userForm.valid) {
-      this.abs.postCalculatorgoal("details",data).subscribe((res)=>{
+      this.abs.postUserDetails("details",data).subscribe((res)=>{
         this.uid= res['userid'];
         //Setting uid in Local Storage
         localStorage.setItem('id',this.uid);

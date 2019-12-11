@@ -1,8 +1,16 @@
 {
-    "selectgoals": [
+    "goals": [
        {
-         "goalId":0,
+         "goalId":1,
          "goal":"Retirement"
+     },
+     {
+        "goalId":"2",
+        "goal":"Bike"
+     },
+     {
+         "goalId":"3",
+         "goal":"Car"
      }
     ]
 }
